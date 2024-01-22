@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+ 	<bean id="addr" class="com.autowire.Address">
+ 	
+			<!--	Constructor Dependency 	 -->
+<!--  	<constructor-arg name="city" value="Devarakonda"/> -->
+<!--  	<constructor-arg name="pincode" value="508248"/> -->
+
+<!-- 	<constructor-arg index="0" value="Devarakonda"/> -->
+<!--  	<constructor-arg index="1" value="508248"/> -->
+ 	
+ 			<!--	Setter Dependency 	 -->
+ 		<property name="city" value="Devarakonda"></property>
+ 		<property name="pincode" value="508248"></property>	
+ 		
+ 	</bean>
+ 	
+ 	<bean id="stud" class="com.autowire.Student" autowire="constructor">
+ 	
+<!--  		<constructor-arg name="addres" ref="addr"/> -->
+ 		
+ 	</bean>
+</beans>

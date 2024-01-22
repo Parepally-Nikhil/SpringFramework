@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+     	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+            http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+ 
+    <!-- bean definitions here -->
+   <bean id="t" class="com.collectionobjectsinjection.Teacher">
+    <property name="name" value="Nikhil">
+    
+    </property>
+    
+    <property name="id" value="45">
+    
+    </property>
+     
+     <property name="contacts">
+    	<list>
+    		<value>7799443721</value>
+    		<value>7569586191</value>
+    	</list>
+     </property>
+    
+     <property name="subjects">
+    	<set>
+    		<value>Java</value>
+    		<value>Python</value>
+    		<value>C language</value>
+    		<value>Dbms</value>
+    	</set>
+    </property>
+    
+    <property name="address">
+    	<map>
+    		<entry key="Home" value="Ashoknagar-Miryalaguda"></entry>
+    		<entry key="Office" value="Bellandur-Banglore"></entry>
+    	</map>
+    </property>
+    
+     <property name="timetable">
+    	<props>
+    		<prop key="Cse-A">9:00-12:00</prop>
+    		<prop key="Cse-B">2:00-5:00</prop>
+    	</props>
+    </property>
+    </bean>
+</beans>

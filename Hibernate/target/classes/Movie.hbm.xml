@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.example.demo.Hibernate.Movie">
+<id name="movieId">
+<generator class="increment"/>
+</id>
+<property name="movieName"/>
+<property name="movieHero"/>
+<property name="movieHeroine"/>
+</class>
+</hibernate-mapping>
